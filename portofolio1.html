@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Saya</title>
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- bootstrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        .profile{
+            background-color: rgb(240, 183, 97);
+            border-radius: 100% 100% 20% 20%;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile img{
+            border-radius: 50% 50% 10% 10%;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .center-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+
+        .h-custom{
+            height: 90vh;
+        }
+
+        .btn-custom{
+            background-color: rgb(240, 183, 97);
+            color: white;
+        }
+
+        h1{
+            font-weight: 700;
+            font-size: 5em;
+        }
+
+        h2{
+            font-weight: 500;
+            font-size: 2.5rem;
+        }
+
+        .bg-custom-yell{
+            background-color: rgb(240, 183, 97);
+            width:100vw;
+        }
+
+        .bg-custom-whi{
+            background-color: rgb(243, 243, 243);
+            
+        }
+
+
+        .g-custom{
+            gap: 20px;
+        }
+
+        .ps{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .section-2-img {
+            
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        /* Pada ukuran layar besar, gambar mengambil 1/3 bagian */
+        .col-md-6 .section-2-img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Kolom kanan pada section 2 akan seperti input form */
+        .section-2-info {
+            background: linear-gradient(to left, #2c2c2c, #2c3e50);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .bor-yell{
+            border: 3px solid rgb(240, 183, 97);
+        }
+        
+        .card-img-top:hover {
+            transform:scaleY(1.1); /* Gambar membesar sedikit saat hover */
+            transition: transform 0.3s ease;
+        }
+
+        @media screen and (max-width: 770px) {
+            .center-container{
+                flex-direction: row-reverse;
+                text-align: center;
+            }
+
+            .h-custom{
+                height: auto;
+            }
+
+            h1 {
+                margin-top: 20px;
+                font-size: 3.5em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .g-custom{
+                gap: 0;
+            }
+
+            .ps{
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black" style=" position: sticky;
+                                                                      top: 0;
+                                                                      background: linear-gradient(to left, #2c2c2c, #2c3e50);
+                                                                      z-index: 100;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-person-circle"></i> Biodata</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">My Project</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </nav>
+
+   <!-- section 1 -->
+    <div class="container center-container h-custom">
+        <div class="row align-items-center ">
+            <div class="col-md-6 ms-auto align-items-center">
+                <h1>Hy,There!</h1>
+                <h2>I'm Wanda — A Passionate Developer</h2>
+                <p>Explore my work, my journey, and the creative projects I’ve worked on. Let’s connect and build something amazing together!</p>
+                <button class="btn btn-custom">SEE MORE  <i class="bi bi-box-arrow-in-right"></i></button>
+            </div>
+            
+            <div class="col-md-6 profile p-3 pb-1 g-5 mb-5">
+                <img src="https://i.pinimg.com/474x/3d/d6/f4/3dd6f44221980cdb39dde5d598441f4a.jpg" alt="gambar" class="img-fluid mx-auto d-block">
+            </div>
+        </div>
+    </div>
+
+    <!-- section 2 -->
+    <div class="container-fluid bg-custom-yell">
+        <div class="container">
+            <h2 class="center-container ps" style="color: rgb(243, 243, 243);"><b>ABOUT ME</b></h2>
+            <div class="row mt-2 pb-4">
+                <!-- Kolom 1/3 untuk gambar -->
+                <div class="col-md-4 d-none d-md-block section-2-img">
+                    <img src="https://i.pinimg.com/474x/3d/d6/f4/3dd6f44221980cdb39dde5d598441f4a.jpg" alt="gambar" class="img-fluid mx-auto d-block" style="border: 5px solid rgb(243, 243, 243); border-radius: 20px; object-fit: cover;box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);">
+                </div>
+
+                <!-- Kolom 2/3 untuk informasi -->
+                <div class="col-md-8 center-container">
+                    <div class="row " style="color: white;">
+                        <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
+                            <b>Full Name</b><br>Wanda Fitriardi</div>
+                        <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
+                            <b>Email</b><br>wnn00@gmail.com</div>
+                        <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
+                            <b>Occupation</b><br>Masih Kuliah</div>
+                        <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
+                            <b>Education</b><br>Sistem Informasi, Unand</div>
+                        <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
+                            <b>Hobby</b><br>Membaca</div>
+                        <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
+                            <b>Address</b><br>Padang, Sumatra Barat</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section 3 -->
+    <div class="container mt-5 text-center">
+        <h2 class="mb-3 "><b>My Project</b></h1>
+
+        <!-- Desktop View-->
+        <div class=" row justify-content-center d-none d-md-flex pt-3 pb-3 rounded-3" style="background-color:rgb(240, 183, 97);">
+            <!-- Left Image -->
+            <div class="col-md-4">
+                <div class="card rounded-3 hov">
+                    <img src="https://i.pinimg.com/474x/ba/4f/b1/ba4fb1ee12bacd95f9d34a4bb6152037.jpg" class="card-img-top hov" alt="gambar">
+                    <div class="card-body">
+                        <p class="card-text"><b>Proyek 1</b><br>Membuat Aplikasi e-commerce</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Center Image -->
+            <div class="col-md-4">
+                <div class="card rounded-3">
+                    <img src="https://i.pinimg.com/474x/5b/7a/c5/5b7ac52c28dbbf4062f908190eb9b0c4.jpg" class="card-img-top" alt="gambar">
+                    <div class="card-body">
+                        <p class="card-text"><b>Proyek 2</b><br>Membuat Aplikasi e-commerce</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Image -->
+            <div class="col-md-4">
+                <div class="card rounded-3">
+                    <img src="https://i.pinimg.com/474x/1a/ee/52/1aee527a276ccc7073618164d77aadc5.jpg" class="card-img-top" alt="gambar">
+                    <div class="card-body">
+                        <p class="card-text"><b>Proyek 3</b><br>Membuat Aplikasi e-commerce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile View-->
+        <div id="carouselExampleCaptions" class="carousel slide d-md-none" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-3 p-2" style="background-color: rgb(240, 183, 97);">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="https://i.pinimg.com/474x/ba/4f/b1/ba4fb1ee12bacd95f9d34a4bb6152037.jpg" class="d-block w-100" alt="Image 1">
+                    <div class="carousel-caption d-md-block">
+                        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalProyek1"><b>Proyek 1</b></button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="https://i.pinimg.com/474x/5b/7a/c5/5b7ac52c28dbbf4062f908190eb9b0c4.jpg" class="d-block w-100" alt="Image 2">
+                    <div class="carousel-caption d-md-block">
+                        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalProyek2"><b>Proyek 2</b></button>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="https://i.pinimg.com/474x/1a/ee/52/1aee527a276ccc7073618164d77aadc5.jpg" class="d-block w-100" alt="Image 3">
+                    <div class="carousel-caption d-md-block">
+                        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#modalProyek3"><b>Proyek 3</b></button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>    
+    </div>
+
+    <!-- section 4 -->
+
+    <div class="container-fluid text-center align-items-center justify-content-center " style="color: white; margin-top: 40px;background: linear-gradient(to left, #2c2c2c, #2c3e50)" >
+        <div class="container p-4 ">
+            <p>--------------------------------------------------</p>
+            <p >If you have any questions, suggestions, or just want to get in touch, feel free to reach out. I'm always open to connecting with fellow developers, designers, or anyone passionate about technology. Let’s collaborate and make something amazing together!</p>
+            <p>----------------------------------------------------------</p>
+            <button class="btn btn-custom"><i class="bi bi-email"></i>Contact Me</button>
+        </div>
+    </div>
+
+    
+    <!-- footer -->
+    <div class="container-fluid center-container bg-custom-yell pt-3" style="margin-bottom: 0; padding-bottom: 0;">
+        <p class="justify-content-center">&copy; 2025 Wanda Fitriardi. All Rights Reserved.</p>
+    </div>
+
+    <!-- modal -->
+    <!-- Modal Proyek 1 -->
+    <div class="modal fade" id="modalProyek1" tabindex="-1" aria-labelledby="modalProyek1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyek1Label">Proyek 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Deskripsi proyek : Membuat Aplikasi e-commerce</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Proyek 2 -->
+    <div class="modal fade" id="modalProyek2" tabindex="-1" aria-labelledby="modalProyek2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyek2Label">Proyek 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Deskripsi proyek: Membuat Aplikasi e-commerce</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Proyek 3 -->
+    <div class="modal fade" id="modalProyek3" tabindex="-1" aria-labelledby="modalProyek3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProyek3Label">Proyek 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Deskripsi proyek: Membuat Aplikasi e-commerce</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
