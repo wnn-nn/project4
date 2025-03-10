@@ -22,7 +22,10 @@
             padding: 0;
             
         }
-        
+
+        a{
+            text-decoration: none;
+        }
 
         .profile{
             background-color: rgb(240, 183, 97);
@@ -37,6 +40,8 @@
             overflow: hidden;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
         }
+
+
 
         .center-container {
             display: flex;
@@ -113,6 +118,7 @@
             transition: transform 0.3s ease;
         }
 
+
         @media screen and (max-width: 770px) {
             .center-container{
                 flex-direction: row-reverse;
@@ -153,8 +159,7 @@
 <body>
     
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black" style=" position: sticky;
-                                                                      top: 0;
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black" style=" 
                                                                       background: linear-gradient(to left, #2c2c2c, #2c3e50);
                                                                       z-index: 100;">
         <div class="container">
@@ -164,9 +169,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">My Project</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#Home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#About Me">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#My Project">My Project</a></li>
                 </ul>
             </div>
         
@@ -174,13 +179,13 @@
     </nav>
 
    <!-- section 1 -->
-    <div class="container center-container h-custom">
+    <div class="container center-container h-custom" id="Home">
         <div class="row align-items-center ">
             <div class="col-md-6 ms-auto align-items-center">
                 <h1>Hy,There!</h1>
                 <h2>I'm Wanda — A Passionate Developer</h2>
                 <p>Explore my work, my journey, and the creative projects I’ve worked on. Let’s connect and build something amazing together!</p>
-                <button class="btn btn-custom">SEE MORE  <i class="bi bi-box-arrow-in-right"></i></button>
+                <button class="btn btn-custom"  ><a href="#About Me" style="color: rgb(0, 0, 0);">SEE MORE  <i class="bi bi-box-arrow-in-right"></i></a></button>
             </div>
             
             <div class="col-md-6 profile p-3 pb-1 g-5 mb-5">
@@ -190,7 +195,8 @@
     </div>
 
     <!-- section 2 -->
-    <div class="container-fluid bg-custom-yell">
+    
+    <div class="container-fluid bg-custom-yell" id="About Me">
         <div class="container">
             <h2 class="center-container ps" style="color: rgb(243, 243, 243);"><b>ABOUT ME</b></h2>
             <div class="row mt-2 pb-4">
@@ -205,7 +211,7 @@
                         <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
                             <b>Full Name</b><br>Wanda Fitriardi</div>
                         <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
-                            <b>Email</b><br>wnn00@gmail.com</div>
+                            <b>Email</b><br>wnn00@example.com</div>
                         <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
                             <b>Occupation</b><br>Masih Kuliah</div>
                         <div class="col-md-6 bor-yell rounded-3 g-custom section-2-info">
@@ -219,9 +225,10 @@
             </div>
         </div>
     </div>
+    
 
     <!-- section 3 -->
-    <div class="container mt-5 text-center">
+    <div class="container mt-5 text-center" id="My Project">
         <h2 class="mb-3 "><b>My Project</b></h1>
 
         <!-- Desktop View-->
@@ -308,7 +315,7 @@
             <p>--------------------------------------------------</p>
             <p >If you have any questions, suggestions, or just want to get in touch, feel free to reach out. I'm always open to connecting with fellow developers, designers, or anyone passionate about technology. Let’s collaborate and make something amazing together!</p>
             <p>----------------------------------------------------------</p>
-            <button class="btn btn-custom"><i class="bi bi-email"></i>Contact Me</button>
+            <button class="btn btn-custom-yell"><a href="https://wa.me/00000000000" class="btn btn-custom" target="_blank">Contact Me Via Whatsapp</a></button>
         </div>
     </div>
 
